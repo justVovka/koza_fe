@@ -1,9 +1,12 @@
 import React from "react";
 
-import "./App.css";
+import "./App.sass";
+import Header from "../header";
 
 const App = () => {
-    return <h1 className="blue-text text-darken-2">Hello There</h1>;
+    return (
+        <Header/>
+    );
 };
 
 export default App;
