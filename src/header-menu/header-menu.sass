@@ -1,0 +1,43 @@
+// main menu
+.menu__item
+  display: inline-block
+  margin: 1rem
+  font-size: 1.2rem
+
+// user-block
+.user-block > div
+  font-size: 1.2rem
+  display: inline-block
+  margin: 10px
+  cursor: pointer
+  color: #fff
+
+.user-block__details svg
+  margin-right: 5px
+
+
+@media (max-width: 1024px)
+  .main-menu
+    border-bottom: #9149495e solid 2px
+    grid-column-start: 1
+    grid-column-end: 5
+
+  .menu__item
+    display: block
+    margin: 2rem
+    font-size: 1.5rem
+
+  .user-block
+    grid-column-start: 1
+    grid-column-end: 7
+    div
+      font-size: 1.5rem
+      display: block
+      margin: 2rem
+      cursor: pointer
+      color: #fff
+      &.user-block__search:after
+        content: 'Поиск'
+        margin-left: 10px
+      &.user-block__notifications
+        display: none
