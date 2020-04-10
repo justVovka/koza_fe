@@ -1,0 +1,29 @@
+.user-menu
+  position: absolute
+  top: 1.8rem
+  right: 0
+  padding: 15px
+  background-color: #b15054
+  &__item
+    margin-top: 10px
+    &.underline
+      border-top: white solid 2px
+      padding-top: 10px
+  &.hidden
+    display: none
+
+
+@media (max-width: 1024px)
+  .user-menu
+    position: relative
+    top: 0
+    right: 0
+    padding: 15px
+    background-color: #b15054
+    &__item
+      margin-top: 15px
+      &.underline
+        border-top: white solid 2px
+        padding-top: 10px
+    &.hidden
+      visibility: hidden

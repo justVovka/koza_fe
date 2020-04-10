@@ -1,11 +1,25 @@
 import React, {Component} from "react";
 
 import "./header-menu.sass"
+import UserMenu from "../user-menu";
 
 class HeaderMenu extends Component {
 
+    state = {
+        userMenuIsHidden: true
+    };
+
+    onToggleUserMenu = () => {
+        this.setState(({userMenuIsHidden}) => {
+            return {
+                userMenuIsHidden: !userMenuIsHidden
+            }
+        });
+    };
+
     render() {
         const { menuIsHidden } = this.props;
+
 
         return (
             <React.Fragment>
@@ -23,7 +37,10 @@ class HeaderMenu extends Component {
                         <i className="fas fa-search"/>
                     </div>
                     <div className="user-block__notifications"><i className="far fa-bell"/></div>
-                    <div className="user-block__details"><i className="fas fa-user-alt"/>Вход / Регистрация</div>
+                    <div className="user-block__details" onClick={this.onToggleUserMenu}>
+                        <i className="fas fa-user-alt"/>Рок_Аттряд
+                    </div>
+                    <UserMenu isHidden={this.state.userMenuIsHidden}/>
                 </div>
             </React.Fragment>
         );
