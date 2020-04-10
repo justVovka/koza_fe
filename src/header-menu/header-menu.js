@@ -19,7 +19,9 @@ class HeaderMenu extends Component {
                     </nav>
                 </div>
                 <div className="user-block" hidden={menuIsHidden}>
-                    <div className="user-block__search"><i className="fas fa-search"/></div>
+                    <div className="user-block__search" onClick={this.props.onToggleSearcInput}>
+                        <i className="fas fa-search"/>
+                    </div>
                     <div className="user-block__notifications"><i className="far fa-bell"/></div>
                     <div className="user-block__details"><i className="fas fa-user-alt"/>Вход / Регистрация</div>
                 </div>
