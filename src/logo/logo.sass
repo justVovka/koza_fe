@@ -1,0 +1,17 @@
+// logo
+.logo a
+  display: inline-block
+  &:after
+    content: 'Koza Парад'
+    font-size: 2em
+  img
+    width: 70px
+    vertical-align: middle
+
+
+@media (max-width: 1024px)
+  .logo
+    grid-column-start: 1
+    grid-column-end: 2
+    a:after
+      content: none

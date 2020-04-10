@@ -11,42 +11,6 @@
     align-self: center
     justify-self: center
 
-// logo
-.logo a
-  display: inline-block
-  &:after
-    content: 'Koza Парад'
-    font-size: 2em
-  img
-    width: 70px
-    vertical-align: middle
-
-// toggle menu icon
-.toggle-menu
-  display: none
-  font-size: 2rem
-  color: white
-  cursor: pointer
-
-// input search
-.search-input
-  background-color: #fff
-  padding: 0.6rem 1.2rem
-  box-shadow: 0 0 5px #333
-  position: relative
-  z-index: 1
-  transition: all .2s linear
-  bottom: 0
-  input
-    outline: none
-    font-family: fantasy
-    font-size: 1.2rem
-    color: #737373
-    width: 100%
-    padding: 5px 0 5px 5px
-    border: 0
-  &.hidden
-    bottom: 60px
 
 @media (max-width: 1024px)
   .header
@@ -54,16 +18,3 @@
     > div:not(.toggle-menu)
       justify-self: left
       width: 100%
-      &.logo
-        grid-column-start: 1
-        grid-column-end: 2
-        a:after
-          content: none
-
-  .toggle-menu
-    display: block
-    grid-column-start: 2
-    grid-column-end: 3
-    justify-self: right
-    align-self: center
-    margin-right: 15px
