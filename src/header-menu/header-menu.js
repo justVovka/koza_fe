@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 import "./header-menu.sass"
 import UserMenu from "../user-menu";
@@ -26,9 +27,15 @@ class HeaderMenu extends Component {
                 <div className="main-menu" hidden={menuIsHidden}>
                     <nav className="header-nav">
                         <ul className="menu">
-                            <li className="menu__item"><a href="">Чарты</a></li>
-                            <li className="menu__item"><a href="">Koza.FM</a></li>
-                            <li className="menu__item"><a href="">Koza.TV</a></li>
+                            <li className="menu__item">
+                                <Link to="/charts">Чарты</Link>
+                            </li>
+                            <li className="menu__item">
+                                <Link to="/music">Koza.FM</Link>
+                            </li>
+                            <li className="menu__item">
+                                <Link to="/video">Koza.TV</Link>
+                            </li>
                         </ul>
                     </nav>
                 </div>

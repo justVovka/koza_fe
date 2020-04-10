@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
 
 import "./user-menu.sass";
 
@@ -11,10 +12,18 @@ class UserMenu extends Component {
         return (
             <div className={userMenuClasses}>
                 <ul>
-                    <li className="user-menu__item"><a href="">Профиль</a></li>
-                    <li className="user-menu__item"><a href="">Настройки</a></li>
-                    <li className="user-menu__item"><a href="">Статистика</a></li>
-                    <li className="user-menu__item underline"><a href="">Выйти</a></li>
+                    <li className="user-menu__item">
+                        <Link to="/profile">Профиль</Link>
+                    </li>
+                    <li className="user-menu__item">
+                        <Link to="/settings">Настройки</Link>
+                    </li>
+                    <li className="user-menu__item">
+                        <Link to="/statistic">Статистика</Link>
+                    </li>
+                    <li className="user-menu__item underline">
+                        <Link to="/quit">Выйти</Link>
+                    </li>
                 </ul>
             </div>
         );

@@ -2,13 +2,14 @@ import React from "react";
 import logo from "./tmp_logo.png";
 
 import "./logo.sass";
+import {Link} from "react-router-dom";
 
 const Logo = () => {
     return (
         <div className="logo">
-            <a href="/" className="logo__img">
+            <Link to="/" className="logo__img">
                 <img src={logo} alt="koza parad"/>
-            </a>
+            </Link>
         </div>
     );
 };
